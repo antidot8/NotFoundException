@@ -36,12 +36,10 @@ public class ProductRepository {
         }
     }
 
-    public Product[] findById(int id) {
+    public Product findById(int id) {
         for (Product item : items) {
             if (item.getId() == id) {
-                Product[] tmp = new Product[1];
-                tmp[0] = item;
-                return tmp;
+                return item;
             }
         }
         return null;
